@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+textarea {
+    width: 100%;
+    height: 140px;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+    resize: none;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+button {
+    background: #ff6a00;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.positive {
+    background-color: rgba(46, 204, 113, 0.8);
+}
+
+.negative {
+    background-color: rgba(231, 76, 60, 0.8);
+}
+
+.confidence {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

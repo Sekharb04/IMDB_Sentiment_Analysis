@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Review Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>🎬 Movie Review Sentiment Analyzer</h1>
+        <p class="subtitle">Analyze audience opinion instantly using Machine Learning</p>
+
+        <form method="POST">
+            <textarea name="review" placeholder="Enter movie review here..." required></textarea>
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result 
+                {% if prediction == 'Positive' %}
+                    positive
+                {% else %}
+                    negative
+                {% endif %}
+            ">
+                {{ prediction }}
+                {% if confidence %}
+                    <span class="confidence">Confidence: {{ confidence }}%</span>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<footer>
+    Built with Flask | TF-IDF | Logistic Regression
+</footer>
+
+</body>
+</html>
